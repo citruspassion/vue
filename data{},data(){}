@@ -41,3 +41,27 @@
   一个暴露在外的接口，里面的东西公用
   
   而new Vue（{}）是创建一个vue实例化，对组件进行数据操作
+  
+  
+  
+  qs.parse()将URL解析成对象的形式
+
+const Qs = require('qs');
+let url = 'method=query_sql_dataset_data&projectId=85&appToken=7d22e38e-5717-11e7-907b-a6006ad3dba0';
+Qs.parse(url);
+console.log(Qs.parse(url));
+
+
+
+
+ qs.stringify()将对象 序列化成URL的形式，以&进行拼接
+
+const Qs = require('qs');
+let obj= {
+     method: "query_sql_dataset_data",
+     projectId: "85",
+     appToken: "7d22e38e-5717-11e7-907b-a6006ad3dba0",
+     datasetId: " 12564701"
+   };
+Qs.stringify(obj);
+console.log(Qs.stringify(obj));
