@@ -1,0 +1,43 @@
+  var a=new Vue({
+        el:"#app",
+        data:{
+            message:"hello",
+            ok:true,
+            sex:"",
+            she:"wangming",
+            items:[
+                {a:'apple'},
+                {a:'banana'}
+                ],
+            phone:["huawei","sony","sungxing"]
+
+        },
+        methods:{
+            sayHi:function () {
+                alert(1)
+            }
+        }
+    });
+    
+    
+    
+    export default {
+    data(){
+        return{
+            user:"andy",
+            msg:"hello"
+        }
+    }
+}
+解释1：为什么这里用了return
+第一个作用就是return老本行作用
+第二个
+不使用return包裹数据会导致成为全局可见，会造成变量污染
+  使用return包裹后数据中变量只在当前组件中生效，不会影响其他组件。
+  
+  
+  解释2：为什么用export default
+  我们刚说了return是为了不让变量污染，那么我们可以推测出这个是什么用
+  一个暴露在外的接口，里面的东西公用
+  
+  而new Vue（{}）是创建一个vue实例化，对组件进行数据操作
